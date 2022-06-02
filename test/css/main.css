@@ -191,17 +191,17 @@ textarea{
   }
 
   h1{
-    font-size: 13vw;
+    font-size: 60px;
     margin-top: 5vw;
   }
 
   h2{
-    font-size: 9vw;
+    font-size: 40px;
     margin-top: 5vw;
   }
 
   .contBt{
-    font-size: 5vw;
+    font-size: 24px;
     padding: 3.67vw 0;
   }
 
@@ -210,15 +210,15 @@ textarea{
   }
 
   .confTitle{
-    font-size: 5vw;
+    font-size: 24px;
   }
 
   .confBody{
-    font-size: 4.16vw;
+    font-size: 20px;
   }
 
   .confTag{
-    font-size: 3vw;
+    font-size: 18px;
   }
 
   .closeBtn{
