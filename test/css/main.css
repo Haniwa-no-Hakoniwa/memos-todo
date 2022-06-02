@@ -1,0 +1,242 @@
+body{
+  font-family: vdl-megamaru, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  background: #4A2DFE;
+}
+
+/*共通CSS*/
+.tac{
+  text-align: center;
+}
+
+.colW{
+  color: #ffffff;
+}
+
+.colB{
+  color: #2C2C2C;
+}
+
+.lh125{
+  line-height: 1.25;
+}
+
+.bgW{
+  background: #ffffff;
+}
+
+.w900{
+  width: 900px;
+}
+
+.mt50{
+  margin-top: 50px;
+}
+
+.v-enter,.v-leave-to{
+  opacity: 0;
+}
+
+.v-enter-to,.v-leave{
+  opacity: 1;
+}
+
+.v-enter-active,.v-leave-active{
+  transition: 0.3s;
+}
+
+/*個別CSS*/
+h1{
+  font-size: 80px;
+  margin-top: 20px;
+}
+
+h2{
+  font-size: 60px;
+  text-decoration: underline;
+  margin-top: 30px;
+}
+
+#memoBox{
+  overflow: hidden;
+}
+
+#memo-input{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,0.6);
+  z-index: 2;
+}
+
+input{
+  width: 100%;
+  padding: 0 20px;
+  border: 1px solid #000;
+}
+
+.input-title{
+  width: 90%;
+}
+
+.contBt{
+  max-width: 700px;
+  width: 80%;
+  display: inline-block;
+  font-size: 50px;
+  padding: 44px 0;
+  border-radius: 74px;
+  margin-top: 20px;
+}
+
+.confTerm{
+  max-width: 800px;
+  width: 80%;
+  text-align: left;
+  padding: 40px 40px;
+  border-radius: 30px;
+  margin: 20px auto 0;
+  position: relative;
+}
+
+#memo-input > .confTerm{
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#memoInner{
+  margin: auto;
+}
+
+.confTerm+.confTerm{
+  margin-top: 10px;
+}
+
+.confTitle{
+  font-size: 30px;
+  text-decoration: underline;
+}
+
+.confBody{
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+.confTag{
+  font-size: 16px;
+  text-align: right;
+  margin-top: 30px;
+}
+
+.closeBtn{
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+}
+
+.confBtn{
+  width: 60%;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 20px;
+  background: #00B7CE;
+  margin: 30px auto 0;
+  cursor: pointer;
+}
+
+.confBtn:hover{
+  opacity: 0.7;
+}
+
+.closeBtn::before,.closeBtn::after{
+  content: "";
+  display: block;
+  width: 100%;
+  height: 10px;
+  background: #707070;
+}
+
+.closeBtn::before{
+  transform: rotate(45deg);
+  transform-origin: 22% 89%;
+}
+
+.closeBtn::after{
+  transform: rotate(-45deg);
+  transform-origin: 50% 50%;
+}
+
+textarea{
+  max-width: 100%;
+  padding: 10px;
+  border: 1px solid #000;
+}
+
+@media screen and (max-width: 768px) {
+  .w900{
+    width: 75vw;
+  }
+
+  .mt50,.confTerm+.confTerm{
+    margin-top: 4.16vw;
+  }
+
+  h1{
+    font-size: 13vw;
+    margin-top: 5vw;
+  }
+
+  h2{
+    font-size: 9vw;
+    margin-top: 5vw;
+  }
+
+  .contBt{
+    font-size: 5vw;
+    padding: 3.67vw 0;
+  }
+
+  .confTerm{
+    padding: 5vw 3.33vw;
+  }
+
+  .confTitle{
+    font-size: 5vw;
+  }
+
+  .confBody{
+    font-size: 4.16vw;
+  }
+
+  .confTag{
+    font-size: 3vw;
+  }
+
+  .closeBtn{
+    top: 5.2vw;
+    right: 3.33vw;
+    /*width: 3.66vw;
+    height: 3.66vw;*/
+  }
+
+  /*.closeBtn::before{
+    transform-origin: 0.3vw 1.2vw;
+  }
+
+  .closeBtn::after{
+    transform-origin: 1.6vw 0.8vw;
+  }*/
+
+  .input-title{
+    width: 80%;
+  }
+}
