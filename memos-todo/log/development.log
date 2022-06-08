@@ -1,0 +1,124 @@
+Started GET "/" for 127.0.0.1 at 2022-06-08 16:47:02 +0900
+  [1m[35m (8.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering vendor/bundle/ruby/2.6.0/gems/railties-6.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered vendor/bundle/ruby/2.6.0/gems/railties-6.1.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 35.0ms | Allocations: 531)
+Completed 200 OK in 86ms (Views: 50.0ms | ActiveRecord: 0.0ms | Allocations: 4409)
+
+
+Started GET "/" for 127.0.0.1 at 2022-06-08 16:47:20 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering vendor/bundle/ruby/2.6.0/gems/railties-6.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered vendor/bundle/ruby/2.6.0/gems/railties-6.1.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 3.7ms | Allocations: 233)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.0ms | Allocations: 1216)
+
+
+Started GET "/home/top" for 127.0.0.1 at 2022-06-08 16:50:25 +0900
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/ubuntu/memos-todo/memos-todo/public/packs
+[Webpacker] Hash: 50e3bf4ccc35a838f1be
+Version: webpack 4.46.0
+Time: 2428ms
+Built at: 2022/06/08 16:50:31
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-7d583ba8e3595cd67db2.js    125 KiB  application  [emitted] [immutable]  application
+js/application-7d583ba8e3595cd67db2.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-7d583ba8e3595cd67db2.js js/application-7d583ba8e3595cd67db2.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered home/top.html.erb within layouts/application (Duration: 6179.4ms | Allocations: 4320)
+  Rendered layout layouts/application.html.erb (Duration: 6179.6ms | Allocations: 4395)
+Completed 500 Internal Server Error in 6187ms (ActiveRecord: 0.0ms | Allocations: 7092)
+
+
+  
+ActionView::Template::Error (Webpacker can't find test.js in /home/ubuntu/memos-todo/memos-todo/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+  "application.js": "/packs/js/application-7d583ba8e3595cd67db2.js",
+  "application.js.map": "/packs/js/application-7d583ba8e3595cd67db2.js.map",
+  "entrypoints": {
+    "application": {
+      "js": [
+        "/packs/js/application-7d583ba8e3595cd67db2.js"
+      ],
+      "js.map": [
+        "/packs/js/application-7d583ba8e3595cd67db2.js.map"
+      ]
+    }
+  }
+}
+):
+    40:   </section>
+    41: </div>
+    42: <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    43: <%= javascript_pack_tag 'test' %>
+  
+app/views/home/top.html.erb:43
+Started GET "/home/top" for 127.0.0.1 at 2022-06-08 16:51:06 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/ubuntu/memos-todo/memos-todo/public/packs
+[Webpacker] Hash: f0357faf55dfff39b839
+Version: webpack 4.46.0
+Time: 659ms
+Built at: 2022/06/08 16:51:08
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-7d583ba8e3595cd67db2.js    125 KiB  application  [emitted] [immutable]  application
+js/application-7d583ba8e3595cd67db2.js.map    139 KiB  application  [emitted] [dev]        application
+           js/test-e5350de8edc1e46753fd.js    4.8 KiB         test  [emitted] [immutable]  test
+       js/test-e5350de8edc1e46753fd.js.map    4.7 KiB         test  [emitted] [dev]        test
+                             manifest.json  654 bytes               [emitted]              
+Entrypoint application = js/application-7d583ba8e3595cd67db2.js js/application-7d583ba8e3595cd67db2.js.map
+Entrypoint test = js/test-e5350de8edc1e46753fd.js js/test-e5350de8edc1e46753fd.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/test.js] 963 bytes {test} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered home/top.html.erb within layouts/application (Duration: 2322.2ms | Allocations: 3021)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 2413.6ms | Allocations: 25464)
+Completed 200 OK in 2414ms (Views: 2414.0ms | ActiveRecord: 0.0ms | Allocations: 25875)
+
+
+Started GET "/home/top" for 127.0.0.1 at 2022-06-08 16:51:21 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/top.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1717)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 4743)
+Completed 200 OK in 13ms (Views: 13.2ms | ActiveRecord: 0.0ms | Allocations: 5127)
+
+
+Started GET "/home/top" for 127.0.0.1 at 2022-06-08 16:53:20 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/top.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1717)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 4743)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.0ms | Allocations: 5122)
+
+

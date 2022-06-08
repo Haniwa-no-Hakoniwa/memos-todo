@@ -1,0 +1,43 @@
+<script>
+  (function(d) {
+    var config = {
+      kitId: 'fip5odz',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+<div id="memoBox">
+  <transition>
+    <div id="memo-input" v-show="seen" style="display: none;">
+      <div class="confTerm bgW pw60">
+        <p class="confTitle"><input type="text" placeholder="タイトルを記入" class="input-title" v-model="addtitle"></p>
+        <p class="confBody"><textarea name="name" placeholder="メモの本文を記入" rows="8" cols="80" v-model="addtext"></textarea></p>
+        <p class="confTag"><input type="text" placeholder="タグを記入" v-model="addtag"></p>
+        <p class="confBtn" v-on:click="addMemo()">メモを追加</p>
+        <span class="closeBtn" v-on:click="closeBtn()"></span>
+      </div>
+    </div>
+  </transition>
+  <h1 class="tac colW">冷蔵庫<br>管理チェッカー</h1>
+  <section class="tac">
+    <h2 class="colW lh125">メモ入力</h2>
+    <button type="button" class="colB contBt bgW" v-on:click="input()">
+      メモを書き込む
+    </button>
+  </section>
+  <section class="tac">
+    <h2 class="colW lh125">確認事項</h2>
+    <div id="memoInner">
+      <div v-for="(memo,index) in memos" class="confTerm bgW pw60" v-show="memo_seen" style="display: none;">
+        <p class="confTitle">{{ memo.title }}</p>
+        <p class="confBody">{{ memo.text }}</p>
+        <p class="confTag">{{ memo.tag }}</p>
+        <span class="closeBtn" v-on:click="closeMemoBtn(index)"></span>
+      </div>
+    </div>
+  </section>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<%= javascript_pack_tag 'test' %>
